@@ -43,6 +43,7 @@ export default function Main() {
     setUserGameItem({ ...gameItem });
   };
 
+  // useEffect là gì?
   useEffect(() => {
     if (userGameItem) {
       const computerNewItem = getRandomGameItem(gameItems);
