@@ -6,6 +6,7 @@ function ChoiceCard({ gameItem, handleGameItemChange }) {
   return (
     <img
       onClick={() => {
+        // Đây là truyền cái parameter bên trên chứ không phải truyền global function vào
         handleGameItemChange(gameItem);
       }}
       className="choice"

@@ -43,7 +43,7 @@ export default function Main() {
     setUserGameItem({ ...gameItem });
   };
 
-  // useEffect là gì?
+  // useEffect là gì, tại sao phải có thêm [userGameItem] ở đuôi?
   useEffect(() => {
     if (userGameItem) {
       const computerNewItem = getRandomGameItem(gameItems);
@@ -52,6 +52,7 @@ export default function Main() {
     }
   }, [userGameItem]);
 
+  // Result sẽ đổi, còn Choices chỉ đổi khi mình đổi list gameItems bên trên
   return (
     <div className="conainer">
       <div className="main">

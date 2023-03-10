@@ -11,6 +11,7 @@ function Choices({ gameItems, handleGameItemChange }) {
             // Không hiểu syntax chỗ này lắm, là mình gọi function ChoiceCard để return cái thẻ img với các thông tin bên dưới? Vậy cái gameItem.id lưu ở đâu?
             key={gameItem.id}
             gameItem={gameItem}
+            // Ở đây phải có parameter này vì handleGameItemChange k phải function global?
             handleGameItemChange={handleGameItemChange}
           />
         ))}
