@@ -3,7 +3,13 @@ import Result from "./Result";
 import Display from "./Display";
 import Choices from "./Choices";
 
+// Choices có ChoiceCard, và Display có Player
+// Choices return phần Choices dưới cùng
+// Player return phần Player ở giữa
+// Result return phần Result trên cùng
+
 import { getRandomGameItem, calculatorUserWinner } from "../utils";
+// Logic để lấy Choice và tính Result
 
 const gameItems = [
   {
@@ -26,11 +32,13 @@ const gameItems = [
   },
 ];
 
+// Tại sao ở đây phải export default?
 export default function Main() {
   const [result, setResult] = useState("N/N");
   const [userGameItem, setUserGameItem] = useState(null);
   const [computerGameItem, setComputerGameItem] = useState(null);
 
+  // Không hiểu function này, tại sao phải có ...?
   const handleGameItemChange = (gameItem) => {
     setUserGameItem({ ...gameItem });
   };
@@ -47,14 +55,14 @@ export default function Main() {
     <div className="conainer">
       <div className="main">
         <Result
-          user1GameItem={"Your code here"}
-          user2GameItem={"Your code here"}
-          result={"Your code here"}
+          user1GameItem={userGameItem}
+          user2GameItem={computerGameItem}
+          result={result}
         />
         <Display />
         <Choices
-          gameItems={"Your code here"}
-          handleGameItemChange={"Your code here"}
+          gameItems={gameItems}
+          handleGameItemChange={handleGameItemChange}
         />
       </div>
     </div>

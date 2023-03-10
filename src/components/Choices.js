@@ -8,9 +8,10 @@ function Choices({ gameItems, handleGameItemChange }) {
       <div className="choices">
         {gameItems.map((gameItem) => (
           <ChoiceCard
+            // Không hiểu syntax chỗ này lắm, là mình gọi function ChoiceCard để return cái thẻ img với các thông tin bên dưới? Vậy cái gameItem.id lưu ở đâu?
             key={gameItem.id}
             gameItem={gameItem}
-            handleGameItemChange={"Your code here"}
+            handleGameItemChange={handleGameItemChange}
           />
         ))}
       </div>

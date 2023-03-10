@@ -1,6 +1,6 @@
 import React from "react";
 
-function Result({ "Your code here" }) {
+function Result({ result, user1GameItem, user2GameItem }) {
   return (
     <div>
       <h1 className="result-header">Result</h1>
@@ -12,5 +12,5 @@ function Result({ "Your code here" }) {
     </div>
   );
 }
-
+// Tại sao phải có đoạn đầu user1GameItem &&?
 export default Result;
